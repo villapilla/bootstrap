@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "letrasLogo";
+  src: url("../font/01 Digitall.ttf");
+}
+@font-face {
+  font-family: "textoWeb";
+  src: url("../font/geforce-light.ttf");
+}
+@font-face {
+  font-family: "textoWebBold";
+  src: url("../font/geforce-bold.ttf");
+}
+main {
+	font-family: "textoWebBold";
+}
+header {
+  background-color: #0c36cd;
+}
+#logo img{
+  padding: 3%;
+	width: 30%;
+}
+.producto {
+  width: 29%;
+  margin: 1.70%;
+  border: #4e6bd7 3px solid;
+  border-radius: 2%;
+  display: inline-block;
+  position: relative;
+}
+.producto img {
+  width: 100%;
+}
+.producto h2 {
+  position: absolute;
+  left: 0.1%;
+  top: 80.8%;
+  width: 86.5%;
+  background-color: #4e6bd7;
+  padding: 20px 10px 0 25px;
+  height: 2em;
+  border: white 1px solid;
+  font-family: "textoWebBold";
+  color: white;
+  text-transform: uppercase;
+}
+.producto var {
+  position: absolute;
+  border-radius: 10px;
+  border: white solid 2px;
+  background-color: #4e6bd7;
+  bottom: 87%;
+  left: 62%;
+  width: 30%;
+  padding: 2%;
+  text-align: center;
+  color: white;
+}
+.producto .oferta {
+  position: absolute;
+  top: 63%;
+  left: -7%;
+  width: 30%;
+  z-index: 1;
+}
