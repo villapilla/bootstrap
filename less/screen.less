@@ -1,0 +1,167 @@
+@azul_claro: #4e6bd7;
+@font-face {
+    font-family: "letrasLogo";
+    src: url("../font/01 Digitall.ttf");
+}
+
+@font-face {
+    font-family: "textoWeb";
+    src: url("../font/geforce-light.ttf");
+}
+
+@font-face {
+    font-family: "textoWebBold";
+    src: url("../font/geforce-bold.ttf");
+}
+
+body {
+    position: relative;
+}
+
+main {
+    font-family: "textoWebBold";
+    pre {
+        tab-size: 8;
+    }
+    li {
+        list-style: none;
+    }
+    header {
+        background-color: #0c36cd;
+    }
+    #logo {
+        padding: 3% 0;
+    }
+    #marca {
+        font-family: "letrasLogo";
+        color: white;
+        text-transform: uppercase;
+    }
+}
+
+.producto {
+    width: 29%;
+    margin: 1.70%;
+    border: #4e6bd7 3px solid;
+    border-radius: 2%;
+    display: inline-block;
+    position: relative;
+    img {
+        min-width: 55px;
+    }
+    h2 {
+        position: absolute;
+        left: 0.1%;
+        top: 80.8%;
+        width: 86.5%;
+        background-color: #4e6bd7;
+        padding: 20px 10px 0 25px;
+        height: 2em;
+        border: white 1px solid;
+        font-family: "textoWebBold";
+        color: white;
+        text-transform: uppercase;
+    }
+    var {
+        position: absolute;
+        border-radius: 10px;
+        border: white solid 2px;
+        background-color: #4e6bd7;
+        bottom: 87%;
+        left: 62%;
+        width: 30%;
+        padding: 2%;
+        text-align: center;
+        color: white;
+    }
+    .oferta {
+        position: absolute;
+        top: 63%;
+        left: -7%;
+        width: 30%;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        header {
+            #login {
+                figure {
+                    background: red;
+                }
+            }
+            #logo img {
+                width: 130px;
+            }
+            #marca {
+                padding: 2% 0 1% 6%;
+            }
+            #marca span {
+                display: block;
+                font-size: 550%;
+            }
+            #marca span.marca_h2 {
+                font-size: 330%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width:992px) {
+    main {
+        header {
+            #login {}
+            #logo img {
+                width: 100px;
+            }
+            #marca {
+                padding: 2% 0 1% 5%;
+            }
+            #marca span {
+                font-size: 450%;
+            }
+            #marca span.marca_h2 {
+                font-size: 270%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        header {
+            #login {
+                display: none;
+            }
+            #logo img {
+                width: 80px;
+            }
+            #marca {
+                padding: 3% 0;
+            }
+            #marca span {
+                font-size: 300%;
+            }
+            #marca span.marca_h2 {
+                font-size: 180%;
+            }
+        }
+        /*nav {
+          .side-collapse-container.out {
+              left: 200px;
+          }
+          .side-collapse {
+              top: 50px;
+              bottom: 0;
+              left: 0;
+              width: 200px;
+              position: fixed;
+              overflow: hidden;
+              transition: width .4s;
+          }
+          .side-collapse.in {
+              width: 0;
+          }*/
+    }
+}

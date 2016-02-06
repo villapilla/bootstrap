@@ -10,15 +10,28 @@
   font-family: "textoWebBold";
   src: url("../font/geforce-bold.ttf");
 }
-main {
-	font-family: "textoWebBold";
+body {
+  position: relative;
 }
-header {
+main {
+  font-family: "textoWebBold";
+}
+main pre {
+  tab-size: 8;
+}
+main li {
+  list-style: none;
+}
+main header {
   background-color: #0c36cd;
 }
-#logo img{
-  padding: 3%;
-	width: 30%;
+main #logo {
+  padding: 3% 0;
+}
+main #marca {
+  font-family: "letrasLogo";
+  color: white;
+  text-transform: uppercase;
 }
 .producto {
   width: 29%;
@@ -29,7 +42,7 @@ header {
   position: relative;
 }
 .producto img {
-  width: 100%;
+  min-width: 55px;
 }
 .producto h2 {
   position: absolute;
@@ -62,4 +75,71 @@ header {
   left: -7%;
   width: 30%;
   z-index: 1;
+}
+@media (min-width: 992px) {
+  main header #login figure {
+    background: red;
+  }
+  main header #logo img {
+    width: 130px;
+  }
+  main header #marca {
+    padding: 2% 0 1% 6%;
+  }
+  main header #marca span {
+    display: block;
+    font-size: 550%;
+  }
+  main header #marca span.marca_h2 {
+    font-size: 330%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  main header #logo img {
+    width: 100px;
+  }
+  main header #marca {
+    padding: 2% 0 1% 5%;
+  }
+  main header #marca span {
+    font-size: 450%;
+  }
+  main header #marca span.marca_h2 {
+    font-size: 270%;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    /*nav {
+          .side-collapse-container.out {
+              left: 200px;
+          }
+          .side-collapse {
+              top: 50px;
+              bottom: 0;
+              left: 0;
+              width: 200px;
+              position: fixed;
+              overflow: hidden;
+              transition: width .4s;
+          }
+          .side-collapse.in {
+              width: 0;
+          }*/
+  }
+  main header #login {
+    display: none;
+  }
+  main header #logo img {
+    width: 80px;
+  }
+  main header #marca {
+    padding: 3% 0;
+  }
+  main header #marca span {
+    font-size: 300%;
+  }
+  main header #marca span.marca_h2 {
+    font-size: 180%;
+  }
 }
