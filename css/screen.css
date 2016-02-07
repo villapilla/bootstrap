@@ -25,13 +25,18 @@ main li {
 main header {
   background-color: #0c36cd;
 }
-main #logo {
+main header #logo {
   padding: 3% 0;
+  text-align: right;
 }
-main #marca {
+main header #marca {
   font-family: "letrasLogo";
   color: white;
   text-transform: uppercase;
+}
+main nav.navbar-inverse,
+main nav {
+  background-color: #4e6bd7;
 }
 .producto {
   width: 29%;
@@ -77,8 +82,37 @@ main #marca {
   z-index: 1;
 }
 @media (min-width: 992px) {
+  .no_display_xs_up {
+    display: none;
+  }
   main header #login figure {
-    background: red;
+    background: #4e6bd7;
+    border-radius: 10px;
+    margin: 21% 0 0 1%;
+    padding: 2% 1% 2%;
+    width: 60%;
+  }
+  main header #login figure figcaption {
+    display: inline-block;
+    width: 50%;
+  }
+  main header #login figure .display-sm {
+    display: none;
+  }
+  main header #login figure li {
+    display: inline-block;
+    width: 79%;
+    margin: 8% 2% 0 0;
+    line-height: 1.4;
+    text-align: center;
+  }
+  main header #login figure a {
+    color: #1da1c0;
+  }
+  main header #login figure img {
+    width: 45px;
+    display: inline-block;
+    vertical-align: baseline;
   }
   main header #logo img {
     width: 130px;
@@ -94,38 +128,15 @@ main #marca {
     font-size: 330%;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  main header #logo img {
-    width: 100px;
-  }
-  main header #marca {
-    padding: 2% 0 1% 5%;
-  }
-  main header #marca span {
-    font-size: 450%;
-  }
-  main header #marca span.marca_h2 {
-    font-size: 270%;
-  }
-}
 @media (max-width: 768px) {
-  main {
-    /*nav {
-          .side-collapse-container.out {
-              left: 200px;
-          }
-          .side-collapse {
-              top: 50px;
-              bottom: 0;
-              left: 0;
-              width: 200px;
-              position: fixed;
-              overflow: hidden;
-              transition: width .4s;
-          }
-          .side-collapse.in {
-              width: 0;
-          }*/
+  .no_display_xs_up {
+    display: normal;
+  }
+  .display-md {
+    display: none;
+  }
+  .display-sm {
+    display: none;
   }
   main header #login {
     display: none;
@@ -141,5 +152,78 @@ main #marca {
   }
   main header #marca span.marca_h2 {
     font-size: 180%;
+  }
+  main .nav > li > a {
+    display: inline-block;
+  }
+  main #nav_main {
+    background-image: linear-gradient(to bottom, #869EF9 0%, #4e6bd7 100%);
+  }
+  main #nav_main #search {
+    margin-top: 1.4%;
+  }
+  main #nav_main .out {
+    left: 200px;
+  }
+  main #nav_main .side-collapse {
+    top: 183px;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    position: fixed;
+    overflow: hidden;
+    transition: width .4s;
+  }
+  main #nav_main .in {
+    width: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .no_display_xs_up {
+    display: none;
+  }
+  .display-md {
+    display: none;
+  }
+  main header #login figure {
+    background: #4e6bd7;
+    border-radius: 10px;
+    margin: 27% 0 0 1%;
+    padding: 2%;
+    width: 55px;
+  }
+  main header #login figure figcaption {
+    display: inline-block;
+    width: 100%;
+  }
+  main header #login figure li {
+    display: inline-block;
+    width: 100%;
+    margin: 8% 2% 0 0;
+    line-height: 0.6;
+    text-align: center;
+  }
+  main header #login figure a {
+    color: #1da1c0;
+  }
+  main header #login figure img {
+    width: 45px;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  main header #logo img {
+    width: 100px;
+  }
+  main header #marca {
+    padding: 2% 0 1% 5%;
+  }
+  main header #marca span {
+    font-size: 450%;
+  }
+  main header #marca span.marca_h2 {
+    font-size: 270%;
+  }
+  main #nav_main {
+    background-image: linear-gradient(to bottom, #869EF9 0%, #4e6bd7 100%);
   }
 }

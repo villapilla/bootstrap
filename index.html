@@ -12,9 +12,9 @@
     <meta name="author" content="David_Villaluenga">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
     <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
     <link rel="stylesheet" href="css/screen.css">
 </head>
 
@@ -28,22 +28,41 @@
                 <span>Shield</span>
                 <span class="marca_h2">Hardware</span>
             </div>
-            <section id="login" class="col-md-4 col-xs-4">
+            <section id="login" class="col-md-4 col-sm-3 col-sm-offset-1 col-md-offset-0">
                 <figure>
                     <img src="img/photo243.png" alt="foto de usuario">
                     <figcaption>
-                        <ul>
+                        <ul class="display-md">
                             <li><a href="#">Login</a></li>
                             <li><a href="#">Registrarse</a></li>
                         </ul>
+                        <li class="dropdown display-sm">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Registrarse</a></li>
+                          </ul>
+                        </li>
                     </figcaption>
                 </figure>
             </section>
         </header>
-        <nav class="navbar-inverse">
+        <nav class="navbar-inverse" id="nav_main">
             <div class="container">
-                <div class="navbar-header">
-                    <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <div class="navbar-header col-xs-12 no_display_xs_up">
+                    <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left col-xs-offset-2"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    <ul>
+                        <li id="search" class="col-xs-7 pull-rigth col-xs-offset-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" name="q">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="login_bar" class="col-xs-2">
+                    </ul>
                 </div>
                 <div class="navbar-inverse side-collapse in">
                     <nav role="navigation" class="navbar-collapse">
@@ -57,128 +76,128 @@
             </div>
         </nav>
         <section id="descripcion" class="container side-collapse-container">
-        <ul>
-            <li class="producto">
-                <article>
-                    <figure>
-                        <img src="img/cryorig-h5-universal.jpg" alt="cryorig-h5">
-                        <h2>
+            <ul>
+                <li class="producto">
+                    <article>
+                        <figure>
+                            <img src="img/cryorig-h5-universal.jpg" alt="cryorig-h5">
+                            <h2>
                                     Criorig H7
                                 </h2>
-                    </figure>
-                    <var>
-                        34,90 €
-                    </var>
-                </article>
-            </li>
-            <li class="producto">
-                <article>
-                    <h2>
+                        </figure>
+                        <var>
+                            34,90 €
+                        </var>
+                    </article>
+                </li>
+                <li class="producto">
+                    <article>
+                        <h2>
                                 Intel Core i7 
                             </h2>
-                    <figure>
-                        <img src="img/intel-core-i7-5960x-30ghz.jpg" alt="cryorig-h5">
-                    </figure>
-                    <var>
-                        1334,90 €
-                    </var>
-                </article>
-            </li>
-            <li class="producto">
-                <article>
-                    <figure>
-                        <img src="img/adata-premier-pro-sp920-128gb-ssd.jpg" alt="ssd adata">
-                        <h2>
+                        <figure>
+                            <img src="img/intel-core-i7-5960x-30ghz.jpg" alt="cryorig-h5">
+                        </figure>
+                        <var>
+                            1334,90 €
+                        </var>
+                    </article>
+                </li>
+                <li class="producto">
+                    <article>
+                        <figure>
+                            <img src="img/adata-premier-pro-sp920-128gb-ssd.jpg" alt="ssd adata">
+                            <h2>
                                     Adata SP920 256Gb SSD
                                 </h2>
-                    </figure>
-                    <var>
-                        103,00 €
-                    </var>
-                </article>
-            </li>
-            <li class="producto">
-                <article>
-                    <figure>
-                        <img src="img/gigabyte-z97x-gaming-gt.jpg.png" alt="placa gigabyte z97">
-                        <h2>
+                        </figure>
+                        <var>
+                            103,00 €
+                        </var>
+                    </article>
+                </li>
+                <li class="producto">
+                    <article>
+                        <figure>
+                            <img src="img/gigabyte-z97x-gaming-gt.jpg.png" alt="placa gigabyte z97">
+                            <h2>
                                     Gigabyte Z97X-Gaming GT
                                 </h2>
-                    </figure>
-                    <var>
-                        248,00 €
-                    </var>
-                </article>
-            </li>
-            <li class="producto">
-                <article>
-                    <figure>
-                        <img src="img/a4tech-a9-bloody-gaming-mouse.jpg" alt="ratón a4Tech gaming">
-                        <h2>
+                        </figure>
+                        <var>
+                            248,00 €
+                        </var>
+                    </article>
+                </li>
+                <li class="producto">
+                    <article>
+                        <figure>
+                            <img src="img/a4tech-a9-bloody-gaming-mouse.jpg" alt="ratón a4Tech gaming">
+                            <h2>
                                     A4Tech A9 Bloody Gaming
                                 </h2>
-                        <figure class="oferta">
-                            <img src="img/boton_rojo.png" alt="oferta especial">
+                            <figure class="oferta">
+                                <img src="img/boton_rojo.png" alt="oferta especial">
+                            </figure>
                         </figure>
-                    </figure>
-                    <var>
-                        24,95 €
-                    </var>
-                </article>
-            </li>
-            <li class="producto">
-                <article>
-                    <figure>
-                        <img src="img/aerocool-gt-white-advance-edition.jpg" alt="caja aerocool GT blanca">
-                        <h2>
+                        <var>
+                            24,95 €
+                        </var>
+                    </article>
+                </li>
+                <li class="producto">
+                    <article>
+                        <figure>
+                            <img src="img/aerocool-gt-white-advance-edition.jpg" alt="caja aerocool GT blanca">
+                            <h2>
                                     Aerocool GT White
                                 </h2>
-                    </figure>
-                    <var>
-                        37,00 €
-                    </var>
-                </article>
-            </li>
-            <li class="producto">
-                <article>
-                    <figure>
-                        <img src="img/zotac-zbox-bi320-e.jpg" alt="zotac Zbox b1320E">
-                        <h2>
+                        </figure>
+                        <var>
+                            37,00 €
+                        </var>
+                    </article>
+                </li>
+                <li class="producto">
+                    <article>
+                        <figure>
+                            <img src="img/zotac-zbox-bi320-e.jpg" alt="zotac Zbox b1320E">
+                            <h2>
                                     Zotac Zbox B1320-E
                                 </h2>
-                    </figure>
-                    <var>
-                        132,00 €
-                    </var>
-                </article>
-            </li>
-            <li class="producto">
-                <article>
-                    <figure>
-                        <img src="img/inno3d-geforce-gtx-970-oc-4gb-gddr5.jpg" alt="tarjeta gráfica 970 4GB inno3D">
-                        <h2>
+                        </figure>
+                        <var>
+                            132,00 €
+                        </var>
+                    </article>
+                </li>
+                <li class="producto">
+                    <article>
+                        <figure>
+                            <img src="img/inno3d-geforce-gtx-970-oc-4gb-gddr5.jpg" alt="tarjeta gráfica 970 4GB inno3D">
+                            <h2>
                                    Inno3D GTX 970 OC 4gb DDR5
                                 </h2>
-                    </figure>
-                    <var>
-                        345,00 €
-                    </var>
-                </article>
-            </li>
-            <li class="producto">
-                <article>
-                    <figure>
-                        <img src="img/enermax-revolution-x-t-630w-modular.jpg.png" alt="fuente enermax 630w">
-                        <h2>
+                        </figure>
+                        <var>
+                            345,00 €
+                        </var>
+                    </article>
+                </li>
+                <li class="producto">
+                    <article>
+                        <figure>
+                            <img src="img/enermax-revolution-x-t-630w-modular.jpg.png" alt="fuente enermax 630w">
+                            <h2>
                                     Enermax X't 630w tModular
                                 </h2>
-                    </figure>
-                    <var>
-                        98,50 €
-                    </var>
-                </article>
-            </li>
-        </ul>
+                        </figure>
+                        <var>
+                            98,50 €
+                        </var>
+                    </article>
+                </li>
+            </ul>
         </section>
         <footer>
             <section>
