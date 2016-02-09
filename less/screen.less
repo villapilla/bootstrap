@@ -67,8 +67,13 @@ main {
     article {
         border: #4e6bd7 3px solid;
         border-radius: 2%;
-        width: 300px;
+        width: 250px;
         margin: auto;
+        overflow: hidden;
+        z-index: 1
+    }
+    li {
+
     }
     img {
         width: 100%;
@@ -99,11 +104,19 @@ main {
         color: white;
     }
     .oferta {
-        position: absolute;
+        position: relative;
         top: 63%;
         left: -7%;
         width: 30%;
         z-index: 1;
+    }
+    .display_hover {
+        position: absolute;
+        z-index: 0;
+        left: 0%;
+        top: 0px;
+        width: 100%;
+        //display: none;
     }
 }
 .no_display_xs_up {
@@ -152,7 +165,7 @@ main {
             #carrusel2 {
                 position: absolute;
                 top: 16%;
-                left: 102%;
+                left: 105%;
                 width:102%;
             }
             h2 {
@@ -181,7 +194,7 @@ main {
                         top: 13%;
                         line-height: 2;
                         text-align: center;
-                        color: @azul_letras;
+                        color: white;
                     }
                 }
             }
@@ -222,7 +235,8 @@ main {
             background-image: linear-gradient(to bottom, #869EF9 0%, #4e6bd7 100%);
         }
         #search {
-            margin-top: 1.4%;
+            margin: 8px 0;
+            width: 80%;
         }
         .navbar-inverse {
                 .navbar-nav > .open > a, .navbar-nav > .active > a {
@@ -253,8 +267,8 @@ main {
             top: 182px;
             bottom: 0;
             left: 0px;
-            width: 150px;
-            height: 113px;
+            width: 200px;
+            height: 500px;
             position: absolute;
             overflow: hidden;
             transition: width .4s;
@@ -340,7 +354,7 @@ main {
             position: relative;
             left: 0%;
             top: 108%;
-            width: 294px;
+            width: 244px;
             background-color: #4E6BD7;
             padding: 3% 0 0 5%;
             height: 3.3em;
@@ -351,7 +365,7 @@ main {
         }
         var {
             left: 45%;
-            width: 25%;
+            width: 120px;
         }
         .ribbon {
                 display: none;
@@ -578,13 +592,13 @@ main {
         .navbar-inverse {
                 .navbar-nav > .open > a, .navbar-nav > .active > a {
                     background-image: none;
-                background-color: @azul_hardware;
+                    background-color: @azul_hardware;
                 }
             }
         #nav_main {
             background-image: linear-gradient(to bottom, #869EF9 73%, #4E6BD7 100%);
             #componentes.display_sm_up {    
-                    display: inline-block;
+                display: inline-block;
             }
             .no_display_xs_up {
                 display: none;
@@ -619,7 +633,6 @@ main {
                 li {
                     margin: 5px;
                     width: 120px;
-                    
                     text-align: center;
                     padding: 1%;
                 }
@@ -692,6 +705,7 @@ main {
         display: none;
     }
     main {
+
         #descripcion {
             #escaparate {
                 padding-left: 5%;
@@ -775,6 +789,7 @@ main {
         }
 
         #nav_main {
+            font-size: 1.3em;
             background-image: linear-gradient(to bottom, #869EF9 73%, #4e6bd7 100%);
             #search2 {
                 width: 22%;
@@ -868,7 +883,7 @@ main {
     .no_display_xs_up {
         display: none;
     }
-     .display-md {
+    .display-md {
         display: inline-block;
     }
     .display-sm {
@@ -876,6 +891,7 @@ main {
     }
     main {
         header {
+            font-size: 1.3em;
             #login {
                 figure {
                     background: @azul_claro;
@@ -949,7 +965,11 @@ main {
             background: @azul_claro;
         }
          #nav_main {
+            font-size: 1.4em;
             background-image: linear-gradient(to bottom, #869EF9 73%, #4e6bd7 100%);
+            #drop_menu li a {
+                font-size: 1.3em;
+            }
             .navbar-inverse {
                 .navbar-nav {
                     li {

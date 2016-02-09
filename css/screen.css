@@ -57,8 +57,10 @@ main header #marca {
 .producto article {
   border: #4e6bd7 3px solid;
   border-radius: 2%;
-  width: 300px;
+  width: 250px;
   margin: auto;
+  overflow: hidden;
+  z-index: 1;
 }
 .producto img {
   width: 100%;
@@ -89,11 +91,18 @@ main header #marca {
   color: white;
 }
 .producto .oferta {
-  position: absolute;
+  position: relative;
   top: 63%;
   left: -7%;
   width: 30%;
   z-index: 1;
+}
+.producto .display_hover {
+  position: absolute;
+  z-index: 0;
+  left: 0%;
+  top: 0px;
+  width: 100%;
 }
 .no_display_xs_up {
   display: inline-block;
@@ -140,7 +149,7 @@ main #descripcion #novedades #carrusel1 {
 main #descripcion #novedades #carrusel2 {
   position: absolute;
   top: 16%;
-  left: 102%;
+  left: 105%;
   width: 102%;
 }
 main #descripcion #novedades h2 {
@@ -169,7 +178,7 @@ main #descripcion #novedades ul .producto span {
   top: 13%;
   line-height: 2;
   text-align: center;
-  color: #1da1c0;
+  color: white;
 }
 main .display_sm_up {
   display: none;
@@ -205,7 +214,8 @@ main #nav_main .navbar-header {
   background-image: linear-gradient(to bottom, #869EF9 0%, #4e6bd7 100%);
 }
 main #nav_main #search {
-  margin-top: 1.4%;
+  margin: 8px 0;
+  width: 80%;
 }
 main #nav_main .navbar-inverse .navbar-nav > .open > a,
 main #nav_main .navbar-inverse .navbar-nav > .active > a {
@@ -235,8 +245,8 @@ main #nav_main .side-collapse {
   top: 182px;
   bottom: 0;
   left: 0px;
-  width: 150px;
-  height: 113px;
+  width: 200px;
+  height: 500px;
   position: absolute;
   overflow: hidden;
   transition: width .4s;
@@ -318,7 +328,7 @@ main .producto span {
   position: relative;
   left: 0%;
   top: 108%;
-  width: 294px;
+  width: 244px;
   background-color: #4E6BD7;
   padding: 3% 0 0 5%;
   height: 3.3em;
@@ -329,7 +339,7 @@ main .producto span {
 }
 main .producto var {
   left: 45%;
-  width: 25%;
+  width: 120px;
 }
 main .producto .ribbon {
   display: none;
@@ -755,6 +765,7 @@ main .google a {
     border: none;
   }
   main #nav_main {
+    font-size: 1.3em;
     background-image: linear-gradient(to bottom, #869EF9 73%, #4e6bd7 100%);
   }
   main #nav_main #search2 {
@@ -838,6 +849,9 @@ main .google a {
   .display-sm {
     display: none;
   }
+  main header {
+    font-size: 1.3em;
+  }
   main header #login figure {
     background: #4e6bd7;
     border-radius: 10px;
@@ -910,7 +924,11 @@ main .google a {
     background: #4e6bd7;
   }
   main #nav_main {
+    font-size: 1.4em;
     background-image: linear-gradient(to bottom, #869EF9 73%, #4e6bd7 100%);
+  }
+  main #nav_main #drop_menu li a {
+    font-size: 1.3em;
   }
   main #nav_main .navbar-inverse .navbar-nav li {
     width: 16%;

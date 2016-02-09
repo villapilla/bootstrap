@@ -12,7 +12,7 @@ $(window).ready(function() {
                 $("#carrusel1").animate({
                     left : "-101%"
                 }, 2000 , function () {
-                    $("#carrusel1").css("left", "95%"); 
+                    $("#carrusel1").css("left", "105%"); 
                     $("#boton_carrusel2").css("opacity", 1);
                     $("#boton_carrusel1").css("opacity", 0.5);   
                 });
