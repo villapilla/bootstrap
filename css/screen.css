@@ -54,7 +54,16 @@ main header #marca {
   display: inline-block;
   position: relative;
 }
+.producto article:hover {
+  border-color: #0c36cd;
+  cursor: pointer;
+}
+.producto article:hover span,
+.producto article:hover var {
+  background: #0c36cd;
+}
 .producto article {
+  position: relative;
   border: #4e6bd7 3px solid;
   border-radius: 2%;
   width: 250px;
@@ -98,11 +107,11 @@ main header #marca {
   z-index: 1;
 }
 .producto .display_hover {
-  position: absolute;
-  z-index: 0;
-  left: 0%;
-  top: 0px;
   width: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
 }
 .no_display_xs_up {
   display: inline-block;
@@ -172,10 +181,10 @@ main #descripcion #novedades ul .producto {
   cursor: pointer;
 }
 main #descripcion #novedades ul .producto span {
-  width: 73%;
-  font-size: 0.6em;
+  width: 100%;
+  font-size: 0.8em;
   left: unset;
-  top: 13%;
+  top: 0;
   line-height: 2;
   text-align: center;
   color: white;
@@ -344,8 +353,8 @@ main .producto var {
 main .producto .ribbon {
   display: none;
   position: absolute;
-  left: 22px;
-  top: 21px;
+  left: 0;
+  top: 0;
   z-index: 4;
   overflow: hidden;
   width: 120px;
@@ -632,9 +641,9 @@ main .google a {
   }
   main .producto span {
     position: absolute;
-    left: 4.8%;
-    top: 81.9%;
-    width: 90.3%;
+    left: 0;
+    top: 85%;
+    width: 100%;
     background-color: #4E6BD7;
     padding: 3% 0 0 5%;
     height: 3.3em;
@@ -646,8 +655,8 @@ main .google a {
   main .producto .ribbon {
     display: inline-block;
     position: absolute;
-    left: 13px;
-    top: 13px;
+    left: 0;
+    top: 0;
     z-index: 4;
     overflow: hidden;
     width: 120px;
@@ -788,9 +797,9 @@ main .google a {
   }
   main .producto span {
     position: absolute;
-    left: 6.9%;
-    top: 77.8%;
-    width: 86%;
+    left: 0;
+    top: 81.2%;
+    width: 100%;
     background-color: #4E6BD7;
     padding: 3% 0 0 5%;
     height: 3.3em;
@@ -801,8 +810,8 @@ main .google a {
   }
   main .producto .ribbon {
     position: absolute;
-    left: 18px;
-    top: 18px;
+    left: 0;
+    top: 0;
     z-index: 4;
     overflow: hidden;
     width: 120px;
@@ -942,9 +951,9 @@ main .google a {
   }
   main .producto span {
     position: absolute;
-    left: 6.9%;
-    top: 80.8%;
-    width: 86.5%;
+    left: 0%;
+    top: 84.8%;
+    width: 100%;
     background-color: #4E6BD7;
     padding: 3% 0 0 5%;
     height: 3.3em;
@@ -955,8 +964,8 @@ main .google a {
   }
   main .producto .ribbon {
     position: absolute;
-    left: 22px;
-    top: 21px;
+    left: 0;
+    top: 0;
     z-index: 4;
     overflow: hidden;
     width: 120px;
@@ -979,4 +988,39 @@ main .google a {
     top: 34px;
     left: -66px;
   }
+}
+.flip-container {
+  perspective: 1000;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+/* preserve-3d: Indicamos que todo elemento hijo del div flipper estara en un espacio 3D XYZ  */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  width: 100$;
+}
+.front,
+.back {
+  /* Backface: Nos permite ocultar la parte posterior de los elementos html */
+  /* en este caso FRONT - BACK */
+  backface-visibility: hidden;
+  transition: 1s;
+  transform-style: preserve-3d;
+  top: 0;
+  left: 0;
+}
+.front {
+  transform: rotateY(0deg);
+  background: #bcea67;
+}
+.back {
+  transform: rotateY(-180deg);
+  background: #ffdd54;
+}
+.flip-container:hover .front {
+  transform: rotateY(180deg);
+}
+.flip-container:hover .back {
+  transform: rotateY(0deg);
 }

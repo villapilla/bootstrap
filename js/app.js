@@ -6,6 +6,12 @@ $(window).ready(function() {
         contentPosition,
         timeoutCarrusel = createSetInterval();
 
+
+        
+        //document.getElementById("new").parentElement.addEventListener("hover", changeProducts, false);
+        $("#new").on("mouseenter", changeProducts);
+        $("#perifericos").on("mouseenter", changeProducts);
+        $("#componentes").on("mouseenter", changeProducts);
         function createSetInterval() {
             return window.setInterval(function () {
             if($("#carrusel1").position().left < 600) {
@@ -97,3 +103,29 @@ $(window).ready(function() {
         }
     });
 });
+function changeProducts() {
+    var section = $("#escaparate"),
+        novedades = $(".new"),
+        componentes = $(".componentes"),
+        perifericos = $(".perifericos"),
+        newSection = $("#escaparate").clone(false).empty();
+    if(this.id === "new") {
+        newSection.append(novedades);
+        newSection.append(componentes);
+        newSection.append(perifericos);
+    } else {
+        if(this.id === "componentes") {
+            newSection.append(componentes);
+            newSection.append(perifericos);
+            newSection.append(novedades);
+        } else {
+            newSection.append(perifericos);
+            newSection.append(novedades);
+            newSection.append(componentes);
+        }
+    }
+    $("#escaparate").replaceWith(newSection);
+    $("#new").off("mouseenter", changeProducts);
+    $("#perifericos").off("mouseenter", changeProducts);
+    $("#componentes").off("mouseenter", changeProducts);
+}
